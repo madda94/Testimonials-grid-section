@@ -19,11 +19,10 @@ img {
   border: 3px solid hsl(263, 68%, 62%);
 }
 .container {
-  width: 80%;
+  width: 90%;
   margin: 9rem auto 4rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   color: #fff;
 }
@@ -58,21 +57,17 @@ img {
 }
 .testimonial-text {
   font-size: 1.4rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   letter-spacing: 0.3px;
 }
 .testimonial:first-child {
-  grid-column: 1/3;
-  grid-row: 1;
-  background-image: url("../images/bg-pattern-quotation.svg");
   background-color: hsl(263, 55%, 52%);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  color: hsla(275, 37%, 78%, 0.927);
   background-repeat: no-repeat;
   background-position-x: 80%;
-  color: hsla(275, 37%, 78%, 0.927);
 }
 .testimonial:nth-child(2) {
-  grid-column: 3/4;
-  grid-row: 1;
   background-color: hsl(217, 19%, 35%);
   color: hsla(0, 0%, 76%, 0.899);
 }
@@ -80,8 +75,6 @@ img {
   color: hsla(0, 0%, 100%, 0.9);
 }
 .testimonial:nth-child(3) {
-  grid-column: 1;
-  grid-row: 2;
   background-color: #fff;
   color: hsla(240, 1%, 57%, 0.892);
 }
@@ -96,14 +89,10 @@ img {
   color: hsla(240, 1%, 57%, 0.892);
 }
 .testimonial:nth-child(4) {
-  grid-column: span 2;
-  grid-row: 2;
   background-color: hsl(219, 29%, 14%);
   color: hsla(0, 0%, 76%, 0.899);
 }
 .testimonial:last-child {
-  grid-row: 1/-1;
-  grid-column: 4/5;
   background-color: #fff;
   color: hsla(240, 1%, 57%, 0.892);
 }
@@ -117,4 +106,33 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 60em) {
+  .container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .testimonial:first-child {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  .testimonial:nth-child(2) {
+    grid-column: 3/4;
+    grid-row: 1;
+  }
+  .testimonial:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .testimonial:nth-child(4) {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+  .testimonial:last-child {
+    grid-row: 1/-1;
+    grid-column: 4/5;
+  }
 }
