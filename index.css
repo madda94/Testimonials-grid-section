@@ -66,6 +66,8 @@ img {
   grid-row: 1;
   background-image: url("../images/bg-pattern-quotation.svg");
   background-color: hsl(263, 55%, 52%);
+  background-repeat: no-repeat;
+  background-position-x: 80%;
   color: hsla(275, 37%, 78%, 0.927);
 }
 .testimonial:nth-child(2) {
